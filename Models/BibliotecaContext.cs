@@ -10,7 +10,10 @@ namespace Biblioteca.Models
             optionsBuilder.UseMySql("Server=localhost;DataBase=Biblioteca;Uid=root;");
         }
 
+        //Utiliza as extensões do Entity framework para criar as tabelas no banco de dados
         public DbSet<Livro> Livros {get; set;}
         public DbSet<Emprestimo> Emprestimos {get; set;}
+        public DbSet<Usuario> Usuarios {get; set;}
+
     }
 }

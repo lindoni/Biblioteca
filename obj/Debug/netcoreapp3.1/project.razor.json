@@ -14417,6 +14417,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\ferna\\Desktop\\projeto Camila\\Senac\\Biblioteca\\Views\\Usuario\\Lista.cshtml",
+      "TargetPath": "Views\\Usuario\\Lista.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ferna\\Desktop\\projeto Camila\\Senac\\Biblioteca\\Views\\Usuario\\Editar.cshtml",
+      "TargetPath": "Views\\Usuario\\Editar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\ferna\\Desktop\\projeto Camila\\Senac\\Biblioteca\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -14454,6 +14464,11 @@
     {
       "FilePath": "c:\\Users\\ferna\\Desktop\\projeto Camila\\Senac\\Biblioteca\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\ferna\\Desktop\\projeto Camila\\Senac\\Biblioteca\\Views\\Usuario\\Cadastro.cshtml",
+      "TargetPath": "Views\\Usuario\\Cadastro.cshtml",
       "FileKind": "mvc"
     },
     {

@@ -1,0 +1,44 @@
+@model ICollection<Usuario>
+@{
+    ViewData["Title"] = "Cadastro";
+}
+<h1>Usuários cadastrados no sistema</h1>
+
+<p class="text-danger"> @ViewData["mensagem"]</p>
+
+ @if(Model != null){
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="row">Nome</th>
+            <th scope="row">Login</th>
+            <th scope="row">Tipo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Usuario u in Model)
+        {
+            <tr>
+                <td>@u.Nome</td>
+                <td>@u.Login</td>
+
+                @if (u.Tipo == Usuario.admin)
+                {
+                    <td>Administrador</td>
+                }
+                else
+                {
+                    <td>Padrão</td>
+                }
+                
+                <td><a href="EditarUsuario?id=@u.Id">Editar</a> | <a href="ExcluirUsuario?id=@u.Id"> Excluir</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+}
+
+
+
+<a href="RegistrarUsuario">Registrar novo usuário</a>

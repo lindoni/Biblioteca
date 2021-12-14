@@ -21,7 +21,6 @@ namespace Biblioteca.Controllers
 
         public IActionResult Index()
         {
-            Autenticacao.CheckLogin(this);
             return View();
         }
 
@@ -31,20 +30,25 @@ namespace Biblioteca.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(string login, string senha)
+        public IActionResult Login(string Login, string Senha)
         {
-            if(login != "admin" || senha != "123")
+            if (Autenticacao.verificaLoginSenha(Login, Senha, this))
+            {
+                return RedirectToAction("Index");
+            }
+
+            else
             {
                 ViewData["Erro"] = "Senha inválida";
                 return View();
             }
-            else
-            {
-                HttpContext.Session.SetString("user", "admin");
-                return RedirectToAction("Index");
-            }
+
         }
 
+        public IActionResult Logout()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
